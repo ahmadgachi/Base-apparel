@@ -1,0 +1,191 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+body {
+  font-family: "Josefin Sans", sans-serif;
+  height: 100vh;
+}
+.container {
+  height: 100%;
+  display: flex;
+  font-size: 16px;
+}
+.top {
+  width: 55%;
+  background-image: url(./images/bg-pattern-desktop.svg);
+  background-size: cover;
+  background-repeat: repeat;
+  display: grid;
+  place-items: center;
+}
+main {
+  padding: 0px 150px;
+}
+.logo {
+  margin-bottom: 100px;
+}
+.heading h1 {
+  font-size: 60px;
+  font-weight: 400;
+  text-transform: uppercase;
+  letter-spacing: 0.2em;
+  margin-bottom: 20px;
+}
+.heading h1 span {
+  font-weight: 300;
+  color: hsl(0, 36%, 70%);
+}
+.heading > p {
+  color: hsl(0, 36%, 70%);
+  line-height: 1.58;
+  margin-bottom: 30px;
+  width: 80%;
+}
+form {
+  display: flex;
+  position: relative;
+}
+.email {
+  width: 70%;
+  height: 50px;
+  border: 0.5px solid hsl(0, 36%, 70%);
+  border-radius: 50px;
+  padding-left: 20px;
+  font-family: "Josefin Sans", sans-serif;
+  background: transparent;
+}
+.email::placeholder {
+  color: hsl(0, 36%, 70%);
+}
+.submit {
+  color: white;
+  height: 50px;
+  width: 80px;
+  border: none;
+  border-radius: 50px;
+  margin-left: -50px;
+  cursor: pointer;
+  background: linear-gradient(hsl(0, 80%, 86%), hsl(0, 74%, 74%));
+}
+.submit svg {
+  fill: white;
+}
+.submit:focus,
+.email:focus {
+  outline: none;
+}
+
+.invalid {
+  border: 1px solid hsl(0, 93%, 68%);
+}
+.picture {
+  width: 45%;
+}
+.picture img {
+  height: 100%;
+  width: 100%;
+}
+.error {
+  color: hsl(0, 93%, 68%);
+  position: absolute;
+  top: 60px;
+  font-size: 12px;
+  left: 20px;
+}
+
+@media (min-height: 1366px) {
+  .container {
+    flex-direction: column;
+  }
+
+  .top {
+    width: 100%;
+    height: 50vh;
+  }
+  .picture {
+    width: 100%;
+    height: auto;
+  }
+}
+
+@media (max-width: 768px) {
+  .empty {
+    height: 10vh;
+  }
+  .container {
+    flex-direction: column-reverse;
+  }
+  .picture {
+    width: 100%;
+    height: 50vh;
+  }
+  .picture img {
+    object-fit: cover;
+    object-position: top;
+  }
+  .top {
+    width: 100%;
+    height: 50vh;
+  }
+  .logo {
+    position: absolute;
+    top: 30px;
+    margin-bottom: 0px;
+  }
+  main {
+    padding: 0px 100px;
+  }
+}
+
+@media (max-width: 540px) {
+  body {
+    height: auto;
+  }
+  main {
+    padding: 30px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 100%;
+    background: linear-gradient(hsl(0, 0%, 100%), hsl(0, 100%, 98%));
+  }
+  .logo {
+    top: 20px;
+  }
+  .logo svg {
+    transform: scale(0.8);
+  }
+  .picture {
+    height: 40vh;
+  }
+  .logo {
+    width: 100%;
+    padding: 0px 30px;
+  }
+  .top {
+    min-height: 50vh;
+  }
+  .heading > p {
+    width: 100%;
+    text-align: center;
+  }
+  .heading h1 {
+    text-align: center;
+    font-size: 45px;
+  }
+  form {
+    width: 100%;
+    justify-content: center;
+  }
+  .email {
+    width: 90%;
+  }
+}
+
+@media (max-width: 320px) {
+  .logo {
+    top: 10px;
+  }
+}
