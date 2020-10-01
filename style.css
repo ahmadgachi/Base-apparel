@@ -26,14 +26,14 @@ main {
 .logo {
   margin-bottom: 100px;
 }
-.heading h1 {
+.heading div {
   font-size: 60px;
   font-weight: 400;
   text-transform: uppercase;
   letter-spacing: 0.2em;
   margin-bottom: 20px;
 }
-.heading h1 span {
+.heading div p:first-child {
   font-weight: 300;
   color: hsl(0, 36%, 70%);
 }
@@ -99,7 +99,6 @@ form {
   .container {
     flex-direction: column;
   }
-
   .top {
     width: 100%;
     height: 50vh;
@@ -171,7 +170,7 @@ form {
     width: 100%;
     text-align: center;
   }
-  .heading h1 {
+  .heading div {
     text-align: center;
     font-size: 45px;
   }
